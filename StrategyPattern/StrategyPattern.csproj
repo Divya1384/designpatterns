@@ -38,16 +38,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConcreteStrategy\CreditCardStrategy.cs" />
-    <Compile Include="ConcreteStrategy\EmailStartegy.cs" />
     <Compile Include="ConcreteStrategy\InternetBankingStrategy.cs" />
     <Compile Include="ConcreteStrategy\GpayStrategy.cs" />
     <Compile Include="ConcreteStrategy\PaytmStrategy.cs" />
-    <Compile Include="ConcreteStrategy\TextStrategy.cs" />
-    <Compile Include="ConcreteStrategy\WhatsAppStrategy.cs" />
     <Compile Include="Model\CardInfo.cs" />
-    <Compile Include="Model\Email.cs" />
     <Compile Include="ShoppingCart.cs" />
-    <Compile Include="Strategy\INotificationStrategy.cs" />
     <Compile Include="Strategy\IPaymentStrategy.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Program.cs" />

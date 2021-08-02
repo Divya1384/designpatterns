@@ -14,7 +14,6 @@ namespace StrategyPattern
             shoppingCart.AddItem(item1);
             shoppingCart.AddItem(item2);
             shoppingCart.Pay(new PaytmStrategy("9876543210"));
-            shoppingCart.NotifyCustomer(new TextStrategy("9876543210"));
 
             Console.Read();
         }

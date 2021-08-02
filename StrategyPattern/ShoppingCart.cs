@@ -36,10 +36,5 @@ namespace StrategyPattern
             float amount = CalculateTotalAmount();
             paymentMethod.Pay(amount);
         }
-
-        public void NotifyCustomer(INotificationStrategy notificationStrategy)
-        {
-            notificationStrategy.SendNotification();
-        }
     }
 }
