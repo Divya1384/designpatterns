@@ -1,9 +1,9 @@
 ﻿namespace DecoratorPattern
 {
-    public abstract class Beverage
+    public interface IBeverage
     {
-        public string Description { get; set; } = "Unknown Beverage";
+        string Description { get; set; }
 
-        public abstract double Cost();
+        double Cost();
     }
 }

@@ -1,15 +1,20 @@
 ﻿namespace DecoratorPattern.Decorator
 {
-    public class Soy : Condiment
+    public class Soy : ICondiment
     {
-        public Soy(Beverage beverage) : base (beverage)
+        private IBeverage _beverage;
+
+        public string Description { get; set; }
+
+        public Soy(IBeverage beverage) 
         {
+            _beverage = beverage;
             Description = beverage.Description + " Soy";
         }
 
-        public override double Cost()
+        public double Cost()
         {
-            return beverage.Cost() + 0.25;
+            return _beverage.Cost() + 0.25;
         }
     }
 }

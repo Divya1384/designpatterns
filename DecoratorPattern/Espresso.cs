@@ -1,13 +1,15 @@
 ﻿namespace DecoratorPattern
 {
-    public class Espresso : Beverage
+    public class Espresso : IBeverage
     {
+        public string Description { get; set; }
+
         public Espresso()
         {
             Description = "Espresso Coffee";
         }
 
-        public override double Cost()
+        public double Cost()
         {
             return 1.5;
         }

@@ -1,15 +1,20 @@
 ﻿namespace DecoratorPattern.Decorator
 {
-    public class Whip : Condiment
+    public class Whip : ICondiment
     {
-        public Whip(Beverage beverage) : base(beverage)
+        private IBeverage _beverage;
+
+        public string Description { get; set; }
+
+        public Whip(IBeverage beverage) 
         {
+            _beverage = beverage;
             Description = beverage.Description + " Whip";
         }
 
-        public override double Cost()
+        public double Cost()
         {
-            return beverage.Cost() + 0.25;
+            return _beverage.Cost() + 0.25;
         }
     }
 }

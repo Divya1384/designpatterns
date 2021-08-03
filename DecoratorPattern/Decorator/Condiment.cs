@@ -1,17 +1,7 @@
 ﻿namespace DecoratorPattern.Decorator
 {
-    public class Condiment : Beverage
+    public interface ICondiment : IBeverage
     {
-        protected Beverage beverage;
 
-        public Condiment(Beverage beverage)
-        {
-            this.beverage = beverage;
-        }
-
-        public override double Cost()
-        {
-            return beverage.Cost();
-        }
     }
 }

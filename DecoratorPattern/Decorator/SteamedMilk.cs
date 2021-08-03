@@ -1,15 +1,20 @@
 ﻿namespace DecoratorPattern.Decorator
 {
-    public class SteamedMilk : Condiment
+    public class SteamedMilk : ICondiment
     {
-        public SteamedMilk(Beverage beverage) : base(beverage)
+        private IBeverage _beverage;
+
+        public string Description { get; set; }
+
+        public SteamedMilk(IBeverage beverage) 
         {
+            _beverage = beverage;
             Description = beverage.Description + " SteamedMilk";
         }
 
-        public override double Cost()
+        public double Cost()
         {
-            return beverage.Cost() + 0.15;
+            return _beverage.Cost() + 0.15;
         }
     }
 }
