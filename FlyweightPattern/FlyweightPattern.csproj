@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C47F5A69-2732-4EF4-B400-4372D32DB4A5}</ProjectGuid>
+    <ProjectGuid>{6656D79B-7B19-4BD7-AECB-B208F88F90E4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactoryPattern</RootNamespace>
-    <AssemblyName>AbstractFactoryPattern</AssemblyName>
+    <RootNamespace>FlyweightPattern</RootNamespace>
+    <AssemblyName>FlyweightPattern</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,24 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\IButton.cs" />
-    <Compile Include="AbstractFactory\IGuiFactory.cs" />
-    <Compile Include="Interface\ITextBox.cs" />
-    <Compile Include="LinuxTextBox.cs" />
-    <Compile Include="LinuxButton.cs" />
-    <Compile Include="AbstractFactory\LinuxFactory.cs" />
-    <Compile Include="MacTextBox.cs" />
-    <Compile Include="MacButton.cs" />
-    <Compile Include="AbstractFactory\MacFactory.cs" />
+    <Compile Include="Circle.cs" />
+    <Compile Include="IShape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WinTextBox.cs" />
-    <Compile Include="WinButton.cs" />
-    <Compile Include="AbstractFactory\WinFactory.cs" />
+    <Compile Include="ShapeFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
