@@ -1,25 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    public class Investor : IInvestor
+    public class Investor : IObserver
     {
-        private string name;
-
-        public Stock Stock { get; set; }
+        public string Name { get; set; }
 
         public Investor(string name)
         {
-            this.name = name;
+            Name = name;
         }
 
-        public void Update(Stock stock)
+        public void Update(IStock stock)
         {
-            Console.WriteLine($"Notified {name} of {stock.Symbol}'s change to ${stock.Price}");
+            Console.WriteLine($"Notified {Name} of {stock.Symbol}'s change to ${stock.Price}");
         }
     }
 }

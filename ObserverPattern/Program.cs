@@ -6,15 +6,15 @@ namespace ObserverPattern
     {
         static void Main(string[] args)
         {
-            var stock = new IBM("IBM", 100);
+            var ibm = new IBM();
 
-            stock.AttachInvestor(new Investor("Divya"));
-            stock.AttachInvestor(new Investor("Shiju"));
+            ibm.Subscribe(new Investor("Divya"));
+            ibm.Subscribe(new Investor("Shiju"));
 
-            stock.Price = 120;
-            stock.Price = 130;
-            stock.Price = 110;
-            stock.Price = 150;
+            ibm.Notify(new Stock("IBM", 120));
+            ibm.Notify(new Stock("IBM", 130));
+            ibm.Notify(new Stock("IBM", 110));
+            ibm.Notify(new Stock("IBM", 150));
 
             Console.Read();
         }
