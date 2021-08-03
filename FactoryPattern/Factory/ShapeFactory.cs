@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace FactoryPattern
 {
-    public class ShapeFactory
+    public class ShapeFactory : IShapeFactory
     {
         private Dictionary<string, IShape> shapeCollection = new Dictionary<string, IShape>();
 
@@ -16,7 +16,8 @@ namespace FactoryPattern
         }
 
         /// <summary>
-        /// Using reflection
+        /// A way to create object using reflection 
+        /// by passing the exact Object Type
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
@@ -26,7 +27,9 @@ namespace FactoryPattern
         }
 
         /// <summary>
-        /// Using reflection
+        /// A way to create object using reflection 
+        /// by passing a string 
+        /// namespace.ObjectType
         /// </summary>
         /// <param name="shapeType"></param>
         /// <returns></returns>
@@ -42,7 +45,7 @@ namespace FactoryPattern
         }
 
         /// <summary>
-        /// Using collection
+        /// A way to create object using a collection
         /// </summary>
         /// <param name="shapeType"></param>
         /// <returns></returns>
