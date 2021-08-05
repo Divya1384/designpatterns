@@ -12,6 +12,7 @@ namespace FlyweightPattern
 
         public static IShape GetShape(string shapeType)
         {
+            //If a circle object already exist it will not create it again. It will use the same object and set the color property
             IShape shape = null;
             if (shapeType.Equals("circle", StringComparison.InvariantCultureIgnoreCase))
             {
