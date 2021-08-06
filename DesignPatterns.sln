@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behavioral", "Behavioral", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "Creational\BuilderPattern\BuilderPattern.csproj", "{38E13F36-4D87-4033-AFBB-34C8D012D6D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorPattern", "Behavioral\IteratorPattern\IteratorPattern.csproj", "{96E543AE-43ED-46CD-85AB-F83339F08674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -93,6 +95,10 @@ Global
 		{38E13F36-4D87-4033-AFBB-34C8D012D6D5}.Debug|x64.Build.0 = Debug|x64
 		{38E13F36-4D87-4033-AFBB-34C8D012D6D5}.Release|x64.ActiveCfg = Release|x64
 		{38E13F36-4D87-4033-AFBB-34C8D012D6D5}.Release|x64.Build.0 = Release|x64
+		{96E543AE-43ED-46CD-85AB-F83339F08674}.Debug|x64.ActiveCfg = Debug|x64
+		{96E543AE-43ED-46CD-85AB-F83339F08674}.Debug|x64.Build.0 = Debug|x64
+		{96E543AE-43ED-46CD-85AB-F83339F08674}.Release|x64.ActiveCfg = Release|x64
+		{96E543AE-43ED-46CD-85AB-F83339F08674}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +117,7 @@ Global
 		{5D1FADB5-DFA7-4AA4-B189-811C36125CA5} = {0BE8198C-F899-4B2D-B242-2FD830FC0261}
 		{A9CA42F3-2D4F-4D6D-B24C-DE728A627021} = {84D5C50B-3609-45F5-9811-BA5BCCA1A296}
 		{38E13F36-4D87-4033-AFBB-34C8D012D6D5} = {84D5C50B-3609-45F5-9811-BA5BCCA1A296}
+		{96E543AE-43ED-46CD-85AB-F83339F08674} = {6EDB202F-C4D6-4176-8970-3684C581E980}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C3F9BA9-68A3-4E74-BEB0-4B7994A71622}
