@@ -1,6 +1,8 @@
-﻿namespace IteratorPattern
+﻿using System.Collections;
+
+namespace IteratorPattern
 {
-    public class NotificationCollection : ICollection
+    public class NotificationCollection : IEnumerable
     {
         private int MaxCount = 10;
         private int count = 0;
@@ -22,7 +24,12 @@
             count++;
         }
 
-        public IIterator CreateIterator()
+        //public IIterator CreateIterator()
+        //{
+        //    return new NotificationIterator(_notifications);
+        //}
+
+        public IEnumerator GetEnumerator()
         {
             return new NotificationIterator(_notifications);
         }

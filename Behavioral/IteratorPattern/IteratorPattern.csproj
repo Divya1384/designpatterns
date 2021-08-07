@@ -44,8 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICollection.cs" />
-    <Compile Include="IIterator.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="NotificationBar.cs" />
     <Compile Include="NotificationCollection.cs" />

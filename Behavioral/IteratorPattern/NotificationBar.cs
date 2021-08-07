@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace IteratorPattern
 {
@@ -13,11 +14,11 @@ namespace IteratorPattern
 
         public void Print()
         {
-            IIterator iterator = _notificationCollection.CreateIterator();
+            IEnumerator iterator = _notificationCollection.GetEnumerator();
 
-            while (iterator.HasNext())
+            while (iterator.MoveNext())
             {
-                var notification = iterator.Next();
+                var notification = (Notification) iterator.Current;
                 Console.WriteLine($"Notification : {notification.GetNotification()} \n");
             }
         }
