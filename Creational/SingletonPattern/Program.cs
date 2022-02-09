@@ -20,40 +20,44 @@ namespace SingletonPattern
 
             Console.WriteLine("\nEager Loading Singleton \n");
 
-            Singleton fromTeacher2 = Singleton.GetInstance();
-            fromTeacher2.PrintDetails("Singleton Eager Loading - From Teacher");
+            SingletonEagerLoading.Instance.PrintDetails("Singleton Eager loading - From Teacher");
 
-            Singleton fromStudent2 = Singleton.GetInstance();
-            fromStudent2.PrintDetails("Singleton Eager loading - From Student");
+            SingletonEagerLoading.Instance.PrintDetails("Singleton Lazy loading - From Student");
 
             Parallel.Invoke(
                 () => PrintTeacherDetails(),
-                () => PrintStudentdetails()
+                () => PrintStudentDetails()
                 );
             Console.ReadLine();
         }
 
         private static void PrintTeacherDetails()
         {
-            //SingletonWithLock fromTeacher3 = SingletonWithLock.GetInstance();
-            //fromTeacher3.PrintDetails("Singleton with single lock - From Teacher");
+            var fromTeacher3 = SingletonWithLock.GetInstance();
+            fromTeacher3.PrintDetails("Singleton with single lock - From Teacher");
 
-            //SingletonWithDoubleLock fromTeacher4 = SingletonWithDoubleLock.GetInstance();
-            //fromTeacher4.PrintDetails("Singleton with double lock - From Teacher");
+            var fromTeacher4 = SingletonWithDoubleLock.GetInstance();
+            fromTeacher4.PrintDetails("Singleton with double check - From Teacher");
 
-            SingletonLazyLoading fromTeacher5 = SingletonLazyLoading.GetInstance();
+            var fromTeacher5 = SingletonLazyLoading.GetInstance();
             fromTeacher5.PrintDetails("Singleton Lazy loading - From Teacher");
+
+            var fromTeacher6 = FullyLazySingleton.Instance;
+            fromTeacher6.PrintDetails("Fully Lazy loading - From Teacher");
         }
-        private static void PrintStudentdetails()
+        private static void PrintStudentDetails()
         {
-            //SingletonWithLock fromStudent3 = SingletonWithLock.GetInstance();
-            //fromStudent3.PrintDetails("Singleton with single lock - From Student");
+            var fromStudent3 = SingletonWithLock.GetInstance();
+            fromStudent3.PrintDetails("Singleton with single lock - From Student");
 
-            //SingletonWithDoubleLock fromStudent4 = SingletonWithDoubleLock.GetInstance();
-            //fromStudent4.PrintDetails("Singleton with double lock - From Student");
+            var fromStudent4 = SingletonWithDoubleLock.GetInstance();
+            fromStudent4.PrintDetails("Singleton with double check - From Student");
 
-            SingletonLazyLoading fromStudent5 = SingletonLazyLoading.GetInstance();
+            var fromStudent5 = SingletonLazyLoading.GetInstance();
             fromStudent5.PrintDetails("Singleton Lazy loading - From Student");
+
+            var fromStudent6 = FullyLazySingleton.Instance;
+            fromStudent6.PrintDetails("Fully Lazy loading - From Student");
         }
     }
 }
