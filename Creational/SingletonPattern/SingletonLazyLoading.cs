@@ -8,7 +8,7 @@ namespace SingletonPattern
 
         private static readonly Lazy<SingletonLazyLoading> Instancelock = new Lazy<SingletonLazyLoading>(() => new SingletonLazyLoading());
 
-        public SingletonLazyLoading()
+        private SingletonLazyLoading()
         {
             _counter++;
             Console.WriteLine($"Counter value: {_counter}");
